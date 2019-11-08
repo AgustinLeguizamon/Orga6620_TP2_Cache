@@ -5,6 +5,8 @@
 
 int main() {
 
+    /*void init()*/
+
     FILE *fp;
     char str[MAXCHAR];
     char* filename = "/home/agustin/Documents/Orga6620/tp2/prueba1.mem";

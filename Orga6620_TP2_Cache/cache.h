@@ -8,7 +8,29 @@
 #include <stdint.h>
 #include "cache_constants.h"
 
-const char CACHE [CACHE_SIZE];
+
+typedef struct CacheBlock{
+
+    char blockByte[OFFSET]; /*guarda el value*/
+    char validateBit;
+    char dirtyBit;
+    char counter;
+    int Tag; /*El tag guarda el address de memoria principal que es unico e irrepetible*/
+
+}CacheBlock;
+
+typedef struct Way{
+    CacheBlock cacheBlocks[SETS];
+}Way;
+
+typedef struct Cache{
+    Way ways[WAYS];
+}Cache;
+
+typedef struct MainMemory{
+    char blockByte [MAIN_MEMORY_SIZE]; /*guarda el value*/
+}MainMemory;
+
 
 /*Funciones catedra*/
 
@@ -34,5 +56,8 @@ float get_miss_rate();
 
 /*Funciones TP*/
 
+/*Calcula en que conjunto va la direccion de memoria, es decir 0 a 7
+ * e.g. 2048/64 mod 8 = 0 -> va en el way 0*/
+char conjunto(unsigned int address);
 
 #endif //ORGA6620_TP2_CACHE_CACHE_H
