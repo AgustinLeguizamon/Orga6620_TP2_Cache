@@ -1,0 +1,4 @@
+"/home/agustin/Documents/Algoritmos III/clion-2019.2.5/bin/cmake/linux/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/agustin/CLionProjects/Orga6620_TP2_Cache
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug

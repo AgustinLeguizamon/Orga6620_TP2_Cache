@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/agustin/CLionProjects/Orga6620_TP2_Cache/cache.h
+stdint.h
+-
+cache_constants.h
+/home/agustin/CLionProjects/Orga6620_TP2_Cache/cache_constants.h
+
+/home/agustin/CLionProjects/Orga6620_TP2_Cache/cache_constants.h
+
+/home/agustin/CLionProjects/Orga6620_TP2_Cache/main.c
+stdio.h
+-
+cache.h
+/home/agustin/CLionProjects/Orga6620_TP2_Cache/cache.h
+
