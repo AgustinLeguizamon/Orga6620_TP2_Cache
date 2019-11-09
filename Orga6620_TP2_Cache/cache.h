@@ -5,7 +5,9 @@
 #ifndef ORGA6620_TP2_CACHE_CACHE_H
 #define ORGA6620_TP2_CACHE_CACHE_H
 
+#include <stdbool.h>
 #include <stdint.h>
+#include <stdio.h>
 #include "cache_constants.h"
 
 
@@ -15,7 +17,7 @@ typedef struct CacheBlock{
     char validateBit;
     char dirtyBit;
     char counter;
-    int Tag; /*El tag guarda el address de memoria principal que es unico e irrepetible*/
+    int Tag; /*El tag guarda el address base del bloque de memoria principal que es unico e irrepetible y sera el mismo para los 64*/
 
 }CacheBlock;
 
@@ -24,6 +26,8 @@ typedef struct Way{
 }Way;
 
 typedef struct Cache{
+    float access;
+    float misses;
     Way ways[WAYS];
 }Cache;
 
@@ -37,6 +41,8 @@ typedef struct MainMemory{
 void init();
 
 unsigned int get_offset (unsigned int address);
+
+unsigned int find_set(unsigned int address);
 
 unsigned int select_oldest(unsigned int setnum);
 
@@ -54,10 +60,5 @@ void write_tomem(unsigned int address, unsigned char value);
 
 float get_miss_rate();
 
-/*Funciones TP*/
-
-/*Calcula en que conjunto va la direccion de memoria, es decir 0 a 7
- * e.g. 2048/64 mod 8 = 0 -> va en el way 0*/
-char conjunto(unsigned int address);
 
 #endif //ORGA6620_TP2_CACHE_CACHE_H
