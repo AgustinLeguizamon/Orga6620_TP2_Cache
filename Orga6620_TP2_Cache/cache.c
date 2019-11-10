@@ -53,7 +53,7 @@ unsigned int get_offset(unsigned int address){
 
 /*conjunto = set*/
 unsigned int find_set(unsigned int address){
-    return (address/OFFSET) % (WAYS);
+    return (address/OFFSET) % (SETS);
 }
 
 
