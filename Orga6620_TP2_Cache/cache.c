@@ -246,9 +246,7 @@ void write_byte (unsigned int address, unsigned char value){
 
 void write_tomem(unsigned int address, unsigned char value){
 
-    unsigned int memoryBlockBaseAddress = (address/OFFSET)*OFFSET;
-
-    mainMemory.blockByte[memoryBlockBaseAddress]=value;
+    mainMemory.blockByte[address]=value;
 
 }
 
