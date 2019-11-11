@@ -14,11 +14,11 @@
 
 typedef struct CacheBlock{
 
-    char blockByte[OFFSET]; /*guarda el value*/
+    unsigned char blockByte[OFFSET]; /*guarda el value*/
     char validateBit;
     char dirtyBit;
     char counter;
-    int Tag; /*El tag guarda el address base del bloque de memoria principal que es unico e irrepetible y sera el mismo para los 64*/
+    unsigned int Tag; /*El tag guarda el memory block address y sera el mismo para los 64*/
 
 }CacheBlock;
 

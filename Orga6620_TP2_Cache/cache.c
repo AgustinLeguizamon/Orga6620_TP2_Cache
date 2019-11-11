@@ -29,7 +29,7 @@ int main() {
 
     /**/
 
-    fileReaderInit(fileReaderPointer, "/home/agustin/Documents/Orga6620/tp2/prueba1.mem" );
+    fileReaderInit(fileReaderPointer, "/home/agustin/Documents/Orga6620/tp2/prueba5.mem" );
 
     char command[5];
 
@@ -37,26 +37,29 @@ int main() {
      * Hardcodeado: Arreglar para que Itere hasta el final del file
      * literal cuento las cantidad de comandos y cambio fileLines*/
 
+    /*prueba1: 19
+     *prueba2: 7
+     *prueba3: 18
+     *prueba4: 17
+     * prueba5: 8
+     * */
     int fileLines = 0;
-    while(fileLines < 19){
+    while(fileLines < 8){
 
         fileReaderGetNextCommand(fileReaderPointer,command);
-
+        printf("%c \t", command[0]);
         switch (command[0]) {
             case 'W':
-                printf("Case W \n");
                 writeCommand(fileReaderPointer);
                 break;
 
             case 'R':
-                printf("Case R \n");
                 readCommand(fileReaderPointer);
                 break;
         }
 
         if(command[0] == 'M' && command[1] == 'R'){
-            printf("Case MR \n");
-            printf("%f", get_miss_rate());
+            printf("\n Miss rate:%f \n", get_miss_rate());
         }
 
 
@@ -71,7 +74,7 @@ int main() {
             }
         }
 
-        printf("******** \n");
+        printf("*********************** \n \n");
         fileLines++;
     }
 
@@ -142,7 +145,7 @@ unsigned int select_oldest(unsigned int setnum){
 void read_tocache(unsigned int blocknum, unsigned int way, unsigned int set){
 
     char aByteCopyFromMainMemory;
-    int memoryBlockBaseAddress = blocknum * OFFSET;
+    unsigned int memoryBlockBaseAddress = blocknum * OFFSET;
 
     CacheBlock *aCacheBlockPointer = &cache.ways[way].cacheBlocks[set];
     bool isDirty = (aCacheBlockPointer->dirtyBit == DIRTY);
@@ -170,7 +173,7 @@ unsigned char read_byte(unsigned int address){
 
     cache.access+=1;
 
-    char value=-1;
+    unsigned char value=0;
     unsigned int setnum,actualWay=0,offset,oldestWay;
     bool found = false;
     unsigned int blocknum = address / OFFSET; 
@@ -182,7 +185,7 @@ unsigned char read_byte(unsigned int address){
     while(!found && actualWay < WAYS){
         CacheBlock *aCacheBlockPointer = &cache.ways[actualWay].cacheBlocks[setnum];
         if( aCacheBlockPointer->Tag == memoryBlockBaseAddress){
-            printf("Read Hit \n");
+            printf("Read Hit in way:%d and set:%d \n",actualWay,setnum);
             found = true;
             value = aCacheBlockPointer->blockByte[offset];
             aCacheBlockPointer->counter=0;
@@ -196,6 +199,7 @@ unsigned char read_byte(unsigned int address){
         oldestWay = select_oldest(setnum);
         read_tocache(blocknum,oldestWay,setnum);
         value = mainMemory.blockByte[address];
+        printf("Writing in oldest or empty Way:%d, Set:%d, offset:%d \n",oldestWay, setnum, offset);
     }
     
     return value;
@@ -217,7 +221,8 @@ void write_byte (unsigned int address, unsigned char value){
 
         CacheBlock *aCacheBlockPointer = &cache.ways[actualWay].cacheBlocks[setnum];
         if(aCacheBlockPointer->Tag == memoryBlockBaseAddress && aCacheBlockPointer->validateBit == VALID){
-            printf("Write Hit \n");
+            printf("Write Hit in way:%d and set:%d \n",actualWay, setnum);
+            printf("Writing value: %u in offset: %d \n",value ,offset);
             found = true;
             aCacheBlockPointer->blockByte[offset] = value;
             aCacheBlockPointer->counter=0;
@@ -232,6 +237,7 @@ void write_byte (unsigned int address, unsigned char value){
         unsigned int oldestWay = select_oldest(setnum);
         read_tocache(blocknum,oldestWay,setnum); //Trae bloque mem a cache
         cache.ways[oldestWay].cacheBlocks[setnum].blockByte[offset] = value; //Escribe en el bloque
+        printf("Writing value:%u in oldest or empty Way:%d, Set:%d, offset:%d \n",value, oldestWay, setnum, offset);
     }
 
 
@@ -274,6 +280,9 @@ void writeCommand(struct fileReader *self){
     memAddress = atoi(addressWOComma);
     printf("%d \t", memAddress);
     byteValue = atoi(value);
+    if(memAddress > MAIN_MEMORY_SIZE || memAddress < 0){
+        printf("Error, la direccion: %d supera el tamaño de la memoria principal  \n", memAddress);
+    }
     printf("%u \n", byteValue);
     write_byte(memAddress, byteValue);
 
@@ -288,7 +297,7 @@ void readCommand(struct fileReader *self) {
     fileReaderGetAddress(self, address);
     memAddress = atoi(address);
     if(memAddress > MAIN_MEMORY_SIZE || memAddress < 0){
-        printf("Error, direccion: %d, mayor que el maximo de memoria principal \n", memAddress);
+        printf("Error, la direccion: %d supera el tamaño de memoria principal \n", memAddress);
     }
     else{
         printf("%d \n", memAddress);
