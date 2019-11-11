@@ -18,7 +18,7 @@ typedef struct CacheBlock{
     char validateBit;
     char dirtyBit;
     char counter;
-    unsigned int Tag; /*El tag guarda el memory block address y sera el mismo para los 64*/
+    int Tag; /*El tag guarda el memory block address y sera el mismo para los 64*/
 
 }CacheBlock;
 
