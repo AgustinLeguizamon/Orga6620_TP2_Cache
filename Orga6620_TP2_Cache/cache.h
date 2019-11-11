@@ -5,6 +5,7 @@
 #ifndef ORGA6620_TP2_CACHE_CACHE_H
 #define ORGA6620_TP2_CACHE_CACHE_H
 
+#include <stdlib.h>
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -59,6 +60,7 @@ void write_byte (unsigned int address, unsigned char value);
 void write_tomem(unsigned int address, unsigned char value);
 
 float get_miss_rate();
+
 
 
 #endif //ORGA6620_TP2_CACHE_CACHE_H

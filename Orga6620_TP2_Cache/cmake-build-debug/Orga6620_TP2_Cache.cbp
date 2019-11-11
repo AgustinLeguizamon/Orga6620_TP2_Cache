@@ -8,92 +8,95 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/hugo/Escritorio/TP Orga/Orga6620_TP2_Cache/cmake-build-debug"/>
+				<Option working_dir="/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/hugo/Escritorio/TP Orga/Orga6620_TP2_Cache/cmake-build-debug"/>
+				<Option working_dir="/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Orga6620_TP2_Cache">
-				<Option output="/home/hugo/Escritorio/TP Orga/Orga6620_TP2_Cache/cmake-build-debug/Orga6620_TP2_Cache" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/hugo/Escritorio/TP Orga/Orga6620_TP2_Cache/cmake-build-debug"/>
+				<Option output="/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Orga6620_TP2_Cache" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 Orga6620_TP2_Cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 Orga6620_TP2_Cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Orga6620_TP2_Cache/fast">
-				<Option output="/home/hugo/Escritorio/TP Orga/Orga6620_TP2_Cache/cmake-build-debug/Orga6620_TP2_Cache" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/hugo/Escritorio/TP Orga/Orga6620_TP2_Cache/cmake-build-debug"/>
+				<Option output="/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Orga6620_TP2_Cache" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 Orga6620_TP2_Cache/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 Orga6620_TP2_Cache/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/hugo/Escritorio/TP Orga/Orga6620_TP2_Cache/cmake-build-debug"/>
+				<Option working_dir="/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/hugo/Escritorio/TP\ Orga/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/hugo/Escritorio/TP Orga/Orga6620_TP2_Cache/cache.c">
+		<Unit filename="/home/agustin/CLionProjects/Orga6620_TP2_Cache/cache.c">
 			<Option target="Orga6620_TP2_Cache"/>
 		</Unit>
-		<Unit filename="/home/hugo/Escritorio/TP Orga/Orga6620_TP2_Cache/cache.h">
+		<Unit filename="/home/agustin/CLionProjects/Orga6620_TP2_Cache/cache.h">
 			<Option target="Orga6620_TP2_Cache"/>
 		</Unit>
-		<Unit filename="/home/hugo/Escritorio/TP Orga/Orga6620_TP2_Cache/cache_constants.h">
+		<Unit filename="/home/agustin/CLionProjects/Orga6620_TP2_Cache/cache_constants.h">
 			<Option target="Orga6620_TP2_Cache"/>
 		</Unit>
-		<Unit filename="/home/hugo/Escritorio/TP Orga/Orga6620_TP2_Cache/lectorDeArchivos.c">
+		<Unit filename="/home/agustin/CLionProjects/Orga6620_TP2_Cache/fileReader.c">
 			<Option target="Orga6620_TP2_Cache"/>
 		</Unit>
-		<Unit filename="/home/hugo/Escritorio/TP Orga/Orga6620_TP2_Cache/main.c">
+		<Unit filename="/home/agustin/CLionProjects/Orga6620_TP2_Cache/fileReader.h">
 			<Option target="Orga6620_TP2_Cache"/>
 		</Unit>
-		<Unit filename="/home/hugo/Escritorio/TP Orga/Orga6620_TP2_Cache/CMakeLists.txt">
+		<Unit filename="/home/agustin/CLionProjects/Orga6620_TP2_Cache/main.c">
+			<Option target="Orga6620_TP2_Cache"/>
+		</Unit>
+		<Unit filename="/home/agustin/CLionProjects/Orga6620_TP2_Cache/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

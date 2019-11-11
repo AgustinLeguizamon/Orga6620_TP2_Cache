@@ -24,4 +24,10 @@
 
 #define NO_VALID 0
 
+#define WRITE 'W'
+
+#define READ 'R'
+
+#define MISS_RATE "MR"
+
 #endif //ORGA6620_TP2_CACHE_CACHE_CONSTANTS_H

@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/Orga6620_TP2_Cache.dir/main.c.o CMakeFiles/Orga6620_TP2_Cache.dir/cache.c.o CMakeFiles/Orga6620_TP2_Cache.dir/lectorDeArchivos.c.o  -o Orga6620_TP2_Cache 
+/usr/bin/cc -g   CMakeFiles/Orga6620_TP2_Cache.dir/main.c.o CMakeFiles/Orga6620_TP2_Cache.dir/cache.c.o CMakeFiles/Orga6620_TP2_Cache.dir/fileReader.c.o  -o Orga6620_TP2_Cache 

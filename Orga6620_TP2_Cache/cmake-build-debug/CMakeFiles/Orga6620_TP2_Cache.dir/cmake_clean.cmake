@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Orga6620_TP2_Cache.dir/cache.c.o"
-  "CMakeFiles/Orga6620_TP2_Cache.dir/lectorDeArchivos.c.o"
+  "CMakeFiles/Orga6620_TP2_Cache.dir/fileReader.c.o"
   "CMakeFiles/Orga6620_TP2_Cache.dir/main.c.o"
   "Orga6620_TP2_Cache"
   "Orga6620_TP2_Cache.pdb"

@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/hugo/Escritorio/clion-2019.2.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = "/home/agustin/Documents/Algoritmos III/clion-2019.2.5/bin/cmake/linux/bin/cmake"
 
 # The command to remove a file.
-RM = /home/hugo/Escritorio/clion-2019.2.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = "/home/agustin/Documents/Algoritmos III/clion-2019.2.5/bin/cmake/linux/bin/cmake" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/hugo/Escritorio/TP Orga/Orga6620_TP2_Cache"
+CMAKE_SOURCE_DIR = /home/agustin/CLionProjects/Orga6620_TP2_Cache
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/hugo/Escritorio/TP Orga/Orga6620_TP2_Cache/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = "/home/hugo/Escritorio/TP Orga/Orga6620_TP2_Cache/cmake-build
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/hugo/Escritorio/clion-2019.2.2/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"/home/agustin/Documents/Algoritmos III/clion-2019.2.5/bin/cmake/linux/bin/cmake" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/hugo/Escritorio/clion-2019.2.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	"/home/agustin/Documents/Algoritmos III/clion-2019.2.5/bin/cmake/linux/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/hugo/Escritorio/TP Orga/Orga6620_TP2_Cache/cmake-build-debug/CMakeFiles" "/home/hugo/Escritorio/TP Orga/Orga6620_TP2_Cache/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/CMakeFiles /home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/hugo/Escritorio/TP Orga/Orga6620_TP2_Cache/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/CLionProjects/Orga6620_TP2_Cache/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -150,32 +150,32 @@ cache.c.s:
 	$(MAKE) -f CMakeFiles/Orga6620_TP2_Cache.dir/build.make CMakeFiles/Orga6620_TP2_Cache.dir/cache.c.s
 .PHONY : cache.c.s
 
-lectorDeArchivos.o: lectorDeArchivos.c.o
+fileReader.o: fileReader.c.o
 
-.PHONY : lectorDeArchivos.o
+.PHONY : fileReader.o
 
 # target to build an object file
-lectorDeArchivos.c.o:
-	$(MAKE) -f CMakeFiles/Orga6620_TP2_Cache.dir/build.make CMakeFiles/Orga6620_TP2_Cache.dir/lectorDeArchivos.c.o
-.PHONY : lectorDeArchivos.c.o
+fileReader.c.o:
+	$(MAKE) -f CMakeFiles/Orga6620_TP2_Cache.dir/build.make CMakeFiles/Orga6620_TP2_Cache.dir/fileReader.c.o
+.PHONY : fileReader.c.o
 
-lectorDeArchivos.i: lectorDeArchivos.c.i
+fileReader.i: fileReader.c.i
 
-.PHONY : lectorDeArchivos.i
+.PHONY : fileReader.i
 
 # target to preprocess a source file
-lectorDeArchivos.c.i:
-	$(MAKE) -f CMakeFiles/Orga6620_TP2_Cache.dir/build.make CMakeFiles/Orga6620_TP2_Cache.dir/lectorDeArchivos.c.i
-.PHONY : lectorDeArchivos.c.i
+fileReader.c.i:
+	$(MAKE) -f CMakeFiles/Orga6620_TP2_Cache.dir/build.make CMakeFiles/Orga6620_TP2_Cache.dir/fileReader.c.i
+.PHONY : fileReader.c.i
 
-lectorDeArchivos.s: lectorDeArchivos.c.s
+fileReader.s: fileReader.c.s
 
-.PHONY : lectorDeArchivos.s
+.PHONY : fileReader.s
 
 # target to generate assembly for a file
-lectorDeArchivos.c.s:
-	$(MAKE) -f CMakeFiles/Orga6620_TP2_Cache.dir/build.make CMakeFiles/Orga6620_TP2_Cache.dir/lectorDeArchivos.c.s
-.PHONY : lectorDeArchivos.c.s
+fileReader.c.s:
+	$(MAKE) -f CMakeFiles/Orga6620_TP2_Cache.dir/build.make CMakeFiles/Orga6620_TP2_Cache.dir/fileReader.c.s
+.PHONY : fileReader.c.s
 
 main.o: main.c.o
 
@@ -216,9 +216,9 @@ help:
 	@echo "... cache.o"
 	@echo "... cache.i"
 	@echo "... cache.s"
-	@echo "... lectorDeArchivos.o"
-	@echo "... lectorDeArchivos.i"
-	@echo "... lectorDeArchivos.s"
+	@echo "... fileReader.o"
+	@echo "... fileReader.i"
+	@echo "... fileReader.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
