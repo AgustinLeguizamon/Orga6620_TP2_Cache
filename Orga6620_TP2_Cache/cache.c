@@ -145,7 +145,7 @@ unsigned int select_oldest(unsigned int setnum){
 void read_tocache(unsigned int blocknum, unsigned int way, unsigned int set){
 
     char aByteCopyFromMainMemory;
-    unsigned int memoryBlockBaseAddress = blocknum * OFFSET;
+    int memoryBlockBaseAddress = blocknum * OFFSET;
 
     CacheBlock *aCacheBlockPointer = &cache.ways[way].cacheBlocks[set];
     bool isDirty = (aCacheBlockPointer->dirtyBit == DIRTY);
@@ -155,7 +155,7 @@ void read_tocache(unsigned int blocknum, unsigned int way, unsigned int set){
 
         aByteCopyFromMainMemory = mainMemory.blockByte[(memoryBlockBaseAddress)+i];
         if(isDirty){
-            write_tomem(memoryBlockBaseAddress+i,aCacheBlockPointer->blockByte[i]);
+            write_tomem(aCacheBlockPointer->Tag+i,aCacheBlockPointer->blockByte[i]);
         }/*Ya se que con preguntar una basta pero lo hace las 64 veces para evitar iterar de nuevo*/
 
         aCacheBlockPointer->blockByte[i]=aByteCopyFromMainMemory;
@@ -185,7 +185,7 @@ unsigned char read_byte(unsigned int address){
     while(!found && actualWay < WAYS){
         CacheBlock *aCacheBlockPointer = &cache.ways[actualWay].cacheBlocks[setnum];
         if( aCacheBlockPointer->Tag == memoryBlockBaseAddress){
-            printf("Read Hit in way:%d and set:%d \n",actualWay,setnum);
+            printf("Read Hit in way:%d, set:%d, offset:%d \n",actualWay, setnum, offset);
             found = true;
             value = aCacheBlockPointer->blockByte[offset];
             aCacheBlockPointer->counter=0;
@@ -226,6 +226,7 @@ void write_byte (unsigned int address, unsigned char value){
             found = true;
             aCacheBlockPointer->blockByte[offset] = value;
             aCacheBlockPointer->counter=0;
+            aCacheBlockPointer->dirtyBit=DIRTY;
         }
         actualWay++;
     }
@@ -264,7 +265,7 @@ void writeCommand(struct fileReader *self){
     int i=0;
 
     unsigned int memAddress;
-    unsigned char byteValue;
+    unsigned int byteValue;
 
     fileReaderGetAddress(self, address);
     fileReaderGetValue(self, value);
@@ -281,8 +282,14 @@ void writeCommand(struct fileReader *self){
     if(memAddress > MAIN_MEMORY_SIZE || memAddress < 0){
         printf("Error, la direccion: %d supera el tamaño de la memoria principal  \n", memAddress);
     }
-    printf("%u \n", byteValue);
-    write_byte(memAddress, byteValue);
+    else if (byteValue > MAX_CHAR){
+        printf("Error el valor: %d supera el tamaño de un byte  \n", byteValue);
+    }
+    else{
+        unsigned char byteValue_c = byteValue;
+        printf("%u \n", byteValue_c);
+        write_byte(memAddress, byteValue_c);
+    }
 
 
 }
@@ -301,6 +308,7 @@ void readCommand(struct fileReader *self) {
         printf("%d \n", memAddress);
         printf("Value: %u \n",read_byte(memAddress));
     }
+
 }
 
 

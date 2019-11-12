@@ -8,7 +8,7 @@
 
 #define MAIN_MEMORY_SIZE 65536
 
-#define CACHE_SIZE 16384
+#define MAX_CHAR 255
 
 #define WAYS 8
 
@@ -23,11 +23,5 @@
 #define VALID 1
 
 #define NO_VALID 0
-
-#define WRITE 'W'
-
-#define READ 'R'
-
-#define MISS_RATE "MR"
 
 #endif //ORGA6620_TP2_CACHE_CACHE_CONSTANTS_H
