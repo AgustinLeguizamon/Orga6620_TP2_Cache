@@ -33,7 +33,7 @@ typedef struct Cache{
 }Cache;
 
 typedef struct MainMemory{
-    char blockByte [MAIN_MEMORY_SIZE]; /*guarda el value*/
+    unsigned char blockByte [MAIN_MEMORY_SIZE]; /*guarda el value*/
 }MainMemory;
 
 

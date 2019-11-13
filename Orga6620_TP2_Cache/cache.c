@@ -29,7 +29,7 @@ int main() {
 
     /**/
 
-    fileReaderInit(fileReaderPointer, "/home/agustin/Documents/Orga6620/tp2/prueba5.mem" );
+    fileReaderInit(fileReaderPointer, "/home/agustin/Documents/Orga6620/tp2/prueba1.mem" );
 
     char command[5];
 
@@ -44,7 +44,7 @@ int main() {
      * prueba5: 8
      * */
     int fileLines = 0;
-    while(fileLines < 8){
+    while(fileLines < 19){
 
         fileReaderGetNextCommand(fileReaderPointer,command);
         printf("%c \t", command[0]);
@@ -144,7 +144,7 @@ unsigned int select_oldest(unsigned int setnum){
 
 void read_tocache(unsigned int blocknum, unsigned int way, unsigned int set){
 
-    char aByteCopyFromMainMemory;
+    unsigned char aByteCopyFromMainMemory;
     int memoryBlockBaseAddress = blocknum * OFFSET;
 
     CacheBlock *aCacheBlockPointer = &cache.ways[way].cacheBlocks[set];
@@ -188,7 +188,6 @@ unsigned char read_byte(unsigned int address){
             printf("Read Hit in way:%d, set:%d, offset:%d \n",actualWay, setnum, offset);
             found = true;
             value = aCacheBlockPointer->blockByte[offset];
-            aCacheBlockPointer->counter=0;
         }
         actualWay++;
     }
@@ -225,7 +224,6 @@ void write_byte (unsigned int address, unsigned char value){
             printf("Writing value: %u in offset: %d \n",value ,offset);
             found = true;
             aCacheBlockPointer->blockByte[offset] = value;
-            aCacheBlockPointer->counter=0;
             aCacheBlockPointer->dirtyBit=DIRTY;
         }
         actualWay++;
@@ -247,7 +245,7 @@ void write_byte (unsigned int address, unsigned char value){
 
 void write_tomem(unsigned int address, unsigned char value){
 
-    mainMemory.blockByte[address]=value;
+    mainMemory.blockByte[address] = value;
 
 }
 
