@@ -23,7 +23,8 @@ int main() {
     branch 4
     branch 5
     MENTION: @AgustinLeguizamon me estoy automencionando
-    Agrego al pull request*/
+    Agrego al pull request
+    Resuelvo Issue #2*/
 
     /*Cambio master*/
     /*Segundo cambio master
