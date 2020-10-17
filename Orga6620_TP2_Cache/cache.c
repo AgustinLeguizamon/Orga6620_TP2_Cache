@@ -18,7 +18,7 @@ int main() {
     struct fileReader *fileReaderPointer = &fileReader;
 
     /*Cambio master*/
-
+    /*Segundo cambio master*/
     /*TODO
      * Pregunta: Hay que iterar las 5 pruebas ?
      * e.g ver a continuacion"
