@@ -19,6 +19,7 @@ int main() {
 
     /*Cambios en el workaround issue
     Mas cambios conflicting with master branch*/
+    /*Conflicting master with workaroundissue*/
     
     /*TODO
      * Pregunta: Hay que iterar las 5 pruebas ?
