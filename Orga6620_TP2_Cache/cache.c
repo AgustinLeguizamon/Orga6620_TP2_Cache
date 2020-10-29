@@ -17,18 +17,8 @@ int main() {
 
     struct fileReader *fileReaderPointer = &fileReader;
 
-    /*Probando un nuevo branch
-    commit VS code 2
-    branch 3
-    branch 4
-    branch 5
-    MENTION: @AgustinLeguizamon me estoy automencionando
-    Agrego al pull request
-    Resuelvo Issue #2*/
+    /*Cambios en el master mientras trabajaba en mi branch*/
 
-    /*Cambio master*/
-    /*Segundo cambio master
-    Tercer cambio master*/
     /*TODO
      * Pregunta: Hay que iterar las 5 pruebas ?
      * e.g ver a continuacion"
