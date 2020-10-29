@@ -17,8 +17,8 @@ int main() {
 
     struct fileReader *fileReaderPointer = &fileReader;
 
-    /*Cambios en el master mientras trabajaba en mi branch*/
-
+    /*Cambios en el workaround issue*/
+    
     /*TODO
      * Pregunta: Hay que iterar las 5 pruebas ?
      * e.g ver a continuacion"
