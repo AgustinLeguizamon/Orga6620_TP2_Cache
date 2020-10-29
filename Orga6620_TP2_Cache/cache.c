@@ -17,6 +17,8 @@ int main() {
 
     struct fileReader *fileReaderPointer = &fileReader;
 
+    /*Cambios en el workaround issue
+    Mas cambios conflicting with master branch*/
     /*Conflicting master with workaroundissue*/
     
     /*TODO
