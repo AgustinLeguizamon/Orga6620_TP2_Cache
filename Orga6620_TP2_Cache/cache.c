@@ -17,7 +17,7 @@ int main() {
 
     struct fileReader *fileReaderPointer = &fileReader;
 
-    /*Cambios en el workaround issue*/
+    /*Conflicting master with workaroundissue*/
     
     /*TODO
      * Pregunta: Hay que iterar las 5 pruebas ?
